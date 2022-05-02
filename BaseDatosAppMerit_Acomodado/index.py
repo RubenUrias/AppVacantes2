@@ -138,6 +138,28 @@ def eliminar(id):
     flash('Contact Removed Successfully')
     return redirect(url_for('Index_2'))
 
+#actividades
+
+@app.route('/actividades')
+def Index_A():
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM actividad')
+    data = cur.fetchall()
+    cur.close()
+    return render_template('actividades.html', actividad = data)
+
+@app.route('/add_actividad', methods=['POST'])
+def add_actividad():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        area = request.form['area']
+        vacante = request.form['vacante']
+        cur = mysql.connection.cursor()
+        cur.execute('INSERT INTO actividad (nombre, area,vacante) VALUES (%s,%s,%s)',
+        (nombre,area,vacante))
+        mysql.connection.commit()
+        return redirect(url_for('Index_A'))
+
 def login():
     return render_template('login.html')
 
@@ -163,11 +185,11 @@ def actividades():
 
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template('home.html')
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True) 
