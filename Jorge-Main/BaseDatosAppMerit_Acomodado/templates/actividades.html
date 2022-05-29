@@ -1,0 +1,78 @@
+{%extends "layout.html"%} 
+
+{% block body%}
+<div class="mx-auto">
+<h1>Actividad Reciente</h1>
+</div>
+<div class="d-grid gap-4 col-1 position-absolute top-50 start-10 translate-middle">
+  <button class="btn btn-danger" type="button">Nuevas</button>
+  <button class="btn btn-danger" type="button">Empleado</button>
+  <button class="btn btn-danger" type="button">Vacante</button>
+  <button class="btn btn-danger" type="button">Fecha</button>
+  <button class="btn btn-danger" type="button">Palabra Clave</button>
+</div>  
+  <style type="text/css">
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .col-md-7{
+      position: absolute;
+      left: 500px;
+    }
+    .d-grid{
+      position: absolute;
+      left: 150px;
+
+    }
+   </style>
+    <form action="{{url_for('add_actividad')}}" method="POST">
+      <div class="form-group">
+          <br>
+          <input type="text" class="form-control" name="nombre">
+          <br>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="area">
+          <br>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="vacante">
+          <br>
+        </div>  
+      <button class="btn btn-danger btn-block">
+        Save 
+      </button>
+    </form>
+  </div>
+</div>
+<div class="col-md-7">
+  <table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+      <tr>
+        <td>N.Empleado</td>
+        <td>Nombre</td>
+        <td>ID</td>
+        <td>Area</td>
+        <td>Vacante</td>
+        <td>Fecha</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact in actividad %}
+      <tr>
+        <td>{{actividad.0}}</td>
+        <td>{{actividad.1}}</td>
+        <td>{{actividad.2}}</td>
+        <td>{{actividad.3}}</td>
+        <td>{{actividad.4}}</td>
+      {% endfor %}
+        </td>
+      </tr>  
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+{% endblock %}
+  

@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style type="text/css">
+  .Postulante{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    text-align: center;
+    left: 5%;
+    top:  23%;
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    
+    
+  }
+  .form-floating{
+    position: absolute;
+    left: 5%;
+    top:  32%;
+    width: 350px;
+    
+
+  }
+  .btn{
+    position: absolute;
+    left: 5%;
+    top:  42%;
+    width: px;
+    background-color: #ca252b;
+
+  }
+  .Vacante{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    text-align: center;
+    left: 25%;
+    top:  23%;
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+  }
+  .Respuesta{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    text-align: center;
+    left: 68.5%;
+    top:  23%;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+
+  }
+  .Vacante2{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    height: 600px;
+    left: 25%;
+    top:  32%;
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: scroll;
+    box-shadow: 5px,5px,5px rgb(0, 0, 0);
+  }
+  .Respuesta1{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    left: 68.5%;
+    top:  32%;
+    width: 500px;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+  }
+  .Respuesta2{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    left: 68.5%;
+    top:  44%;
+    width: 500px;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+  }
+  .Respuesta3{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    left: 68.5%;
+    top:  56%;
+    width: 500px;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+  }
+  .Respuesta4{
+    position: absolute;
+    border-color: #ca252b;
+    border-style: solid;
+    left: 68.5%;
+    top:  68%;
+    width: 500px;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+  }
+  .form-floating2{
+    position: absolute;  
+    left: 68.5%;
+    top:  80%;
+    width: 500px;
+    height: 75px;
+    
+  }
+  .btn1{
+    position: absolute;
+    left:95%;
+    top:  34.5%;
+  }
+  .btn2{
+    position: absolute;
+    left:95%;
+    top:  46.5%;
+  }
+
+  .btn3{
+    position: absolute;
+    left:95%;
+    top:  58.5%;
+  }
+
+  .btn4{
+    position: absolute;
+    left:95%;
+    top:  70.5%;
+  }
+
+  .btn5{
+    position: absolute;
+    left:95%;
+    top:  82.5%;
+  }
+  .tabla{
+    position: absolute;
+    left: 5%;
+    top:  32%;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+    
+
+  }
+  .selec-vacante{
+    position: absolute;
+    left: 11%;
+    top:  23%;
+    width: 1500px;
+  }
+  .tabla2{
+    position: absolute;
+    left: 38%;
+    top:  32%;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  .tabla3{
+    position: absolute;
+    left: 5%;
+    top:  80%;
+    width: 1335px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    
+    
+
+  }
+  .btn6{
+    position: absolute;
+    left: 76%;
+    top:  32%;
+    width: 300px;
+    
+
+  }
+  .form-check{
+    position: absolute;
+    left: 76%;
+    top:  40%;
+    width: 300px;
+
+  }
+  h5{
+    position: absolute;
+    left: 5%;
+    top:  77%;
+    
+    
+  }
+  .h5{
+    position: absolute;
+    left: 38%;
+    top: 29%;
+
+  }
+</style>
+
+
+
+
+<div class="Postulante">
+  <h3>Postulante</h3>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Nombre del Postulante</label>
+
+</div>
+<button type="button" class="btn btn-danger">Ver KARDEX</button>
+<div class="Vacante">
+  <h3>Vacante</h3>
+</div>
+<div class="Respuesta">
+  <h3>Seleccionar Respuesta</h3>
+</div>
+<div class="Vacante2">
+  <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </h1>
+</div>
+<div class="Respuesta1">
+  <h5></h5>
+</div>
+<div class="Respuesta2">
+  <h5></h5>
+</div>
+<div class="Respuesta3">
+  <h5></h5>
+</div>
+<div class="Respuesta4">
+  <h5></h5>
+</div>
+<div class="form-floating2">
+  <textarea class="form-control" placeholder="Mensaje Perzonalizado" id="floatingTextarea"></textarea>
+  <label for="floatingTextarea"></label>
+</div>
+<button type="button" class="btn1 btn-outline-secondary">ENVIAR</button>
+<button type="button" class="btn2 btn-outline-secondary">ENVIAR</button>
+<button type="button" class="btn3 btn-outline-secondary">ENVIAR</button>
+<button type="button" class="btn4 btn-outline-secondary">ENVIAR</button>
+<button type="button" class="btn5 btn-outline-secondary">ENVIAR</button>
+
+
+{% endblock%}
