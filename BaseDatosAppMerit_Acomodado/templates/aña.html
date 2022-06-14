@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+  <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+</body>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+          <form action="{{url_for('add_msjpost')}}" method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" name="vacante" placeholder="Vacante">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="fecha" placeholder="Fecha">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="descripcion" placeholder="Descripcion">
+              </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="originador" placeholder="Originador">
+                </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="mensaje" placeholder="Mensaje">
+                </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="postulantes" placeholder="Postulantes">
+              </div>
+            <button class="btn btn-danger btn-block">
+              Añadir
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

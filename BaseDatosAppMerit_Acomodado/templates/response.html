@@ -1,0 +1,25 @@
+
+<h3>{{numrows}} Vacantes Encontradas</h3>
+<table class="table table-striped">
+  <thead>
+      <tr>
+         <th>N.Empleado</th>
+         <th>Nombre</th>
+         <th>ID</th>
+         <th>Area</th>
+         <th>Vacante</th>
+         <th>Fecha</th>
+      </tr>
+  </thead>
+  <tbody>
+{% for row in employee %}  
+   <tr>
+    <td>{{row.empleado}}</td>
+    <td>{{row.nombre}}</td>
+    <td>{{row.id}}</td>
+    <td>{{row.area}}</td>
+    <td>{{row.vacante}}</td>
+    <td>{{row.fecha}}</td>
+   </tr>
+{% endfor %} 
+
