@@ -1,0 +1,106 @@
+{%extends "layout.html"%}
+
+{% block body%}
+
+
+
+<div class="h5">
+<h5>Postulantes</h5>
+</div>
+<div class="col-md-7">
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+  <thead>
+  <td>ID:</td>
+</thead>
+<thead>
+  <td>Vacante:</td>
+</thead>
+<thead>
+  <td>Fecha:</td>
+</thead>
+<thead>
+  <td>Originador:</td>
+</thead>
+<thead>
+  <td>Descripcion:</td>
+</thead>
+</table>
+</div>
+
+<div class="col-md-7">
+  <table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+      <tr>
+        <td>Fecha</td>
+        <td>Mensaje</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact in adminmensajes %}
+      <tr>
+        <td>{{contact.0}}</td>
+        <td>{{contact.1}}</td>
+        <td>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+<div class="col-md-7">
+  <table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Nombre</td>
+        <td>Fecha</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact in adminmensajes %}
+      <tr>
+        <td>{{contact.0}}</td>
+        <td>{{contact.1}}</td>
+        <td>{{contact.2}}</td>
+        <td>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+<style type="text/css">
+  ::-webkit-scrollbar{
+    display: none;
+    
+  }
+  div{
+  width: 1250px;
+  }
+  .col-md-7{
+    width: 1250px;
+    margin: 0 auto;
+  }
+  .form-check{
+    margin: 0 auto;
+
+  }
+  .boton{
+    margin: 0 auto
+  }
+</style>
+
+<div class="boton">
+  <button type="button" class="btn btn-secondary btn-danger">Seleccionar Candidato</button>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="gridCheck">
+  <label class="form-check-label" for="gridCheck">
+    Enviar mendaje descartando a todos los postulantes no seleccionados
+  </label>
+</div>
+{%endblock%}
